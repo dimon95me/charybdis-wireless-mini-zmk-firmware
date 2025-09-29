@@ -14,16 +14,16 @@ layers:
   - P
   - L_BASE L_GAME
   - TAB
-  - {t: A, h: LCMD}
-  - {t: S, h: LALT}
-  - {t: D, h: LSHFT}
-  - {t: F, h: LCTRL}
+  - {t: A, h: LSHFT}
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: LCMD}
   - G
   - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RSHFT}
-  - {t: L, h: LALT}
-  - {t: ;, h: RCMD}
+  - {t: J, h: RCMD}
+  - {t: K, h: LALT}
+  - {t: L, h: RCTRL}
+  - {t: ;, h: RSHFT}
   - DEL
   - CLIP HIST
   - Z
