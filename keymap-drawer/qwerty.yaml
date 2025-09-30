@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - SEARCH
+  - ESCAPE
   - Q
   - W
   - E
