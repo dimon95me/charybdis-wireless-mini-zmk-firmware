@@ -159,5 +159,15 @@
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
+
+        // --- Универсальный hold-tap ---
+         ht_universal: universal_hold_tap {
+             compatible = "zmk,behavior-hold-tap";
+             #binding-cells = <2>;
+             flavor = "balanced";            // сбалансированный вкус
+             tapping-term-ms = <200>;        // таймаут удержания
+             bindings = <&kp>, <&kp>;        // hold, tap (будут задаваться в keymap)
+         };
+
     };
 };
