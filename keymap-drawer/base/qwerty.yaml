@@ -10,9 +10,9 @@ layers:
   - Y
   - U
   - I
-  - O
+  - {t: Gui+Sft+ O, h: O}
   - P
-  - L_BASE L_GAME
+  - '['
   - TAB
   - {t: A, h: LSHFT}
   - {t: S, h: LCTRL}
@@ -26,24 +26,24 @@ layers:
   - {t: ;, h: RSHFT}
   - DEL
   - CLIP HIST
-  - '&ht_universal Z LCMD Z'
-  - '&ht_universal X LCMD X'
-  - '&ht_universal C LCMD C'
-  - '&ht_universal V LCMD V'
+  - {t: Gui+ Z, h: Z}
+  - {t: Gui+ X, h: X}
+  - {t: Gui+ C, h: C}
+  - {t: Gui+ V, h: V}
   - B
   - N
   - M
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - /
+  - ''
   - ESC SCRL SLOW
   - SYM LCLK
   - BS NUM
   - ENTER
   - SPACE NAV
-  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, KP COMMA, '4', '5', '6', '', '', '',
-    '', '', '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', SPACE, KP 0]
+  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', '', '', '', '', '',
+    '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', SPACE, KP 0]
   NAV:
   - ''
   - WHEEL L
@@ -52,9 +52,9 @@ layers:
   - WHEEL U
   - WHEEL R
   - ''
-  - BACK
+  - Gui+ [
   - UP ARROW
-  - FWD
+  - Gui+ ]
   - ''
   - ''
   - ''
@@ -76,9 +76,9 @@ layers:
   - MOVE R
   - ''
   - ''
-  - UNDO
+  - Gui+ Z
   - Alt+Gui+ LEFT
-  - AC REDO
+  - Sft+Gui+ Z
   - ''
   - ''
   - ''
