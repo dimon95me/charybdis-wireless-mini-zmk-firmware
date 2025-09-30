@@ -26,10 +26,10 @@ layers:
   - {t: ;, h: RSHFT}
   - DEL
   - CLIP HIST
-  - Z
-  - X
-  - C
-  - V
+  - {t: LCMD(K Z), h: Z}
+  - {t: LCMD(K X), h: X}
+  - {t: LCMD(K C), h: C}
+  - {t: LCMD(K V), h: V}
   - B
   - N
   - M
