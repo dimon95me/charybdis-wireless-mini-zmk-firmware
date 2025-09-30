@@ -10,13 +10,12 @@ keymaps = sorted(p.stem for p in keymap_dir.glob("*.keymap"))
 # Map each format to the shields it should build
 format_shields = {
     "bt": ["charybdis_left", "charybdis_right"],
-    "dongle": ["charybdis_left", "charybdis_right", "charybdis_dongle"],
     "reset": ["settings_reset"],
 }
 
 groups = []
 for keymap in keymaps:
-    for fmt in ["bt", "dongle"]:
+    for fmt in ["bt"]:
         groups.append({
             "keymap": keymap,
             "format": fmt,

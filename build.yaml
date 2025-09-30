@@ -6,12 +6,10 @@ board:
 shield:
   - charybdis_left
   - charybdis_right
-  - charybdis_dongle
   - settings_reset
 
 format:
   - bt
-  - dongle
   - reset
 
 keymap:
