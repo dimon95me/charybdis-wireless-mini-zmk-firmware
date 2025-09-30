@@ -42,7 +42,7 @@
             bindings = <
 &kp ESCAPE  &kp Q                             &kp W                               &kp E                                &kp R                              &kp T     &kp Y      &kp U             &kp I             &kp O              &kp P                      &td_layers
 &kp TAB     &ht_left LSHFT A                  &ht_left LCTRL S                    &ht_left LALT D                      &ht_left LCMD F                    &kp G     &kp H      &ht_right RCMD J  &ht_right LALT K  &ht_right RCTRL L  &ht_right RSHFT SEMICOLON  &kp DEL
-&clip_hist  &ht_universal K_Z LCMD(K_Z)       &ht_universal K_X LCMD(K_X)         &ht_universal K_C LCMD(K_C)          &ht_universal K_V LCMD(K_V)        &kp B     &kp N      &kp M             &mm_cm_sc         &mm_pr_col         &mm_qm_ex                  &kp KP_SLASH
+&clip_hist  &ht_universal K_Z LCMD Z          &ht_universal K_X LCMD X            &ht_universal K_C LCMD C             &ht_universal K_V LCMD V           &kp B     &kp N      &kp M             &mm_cm_sc         &mm_pr_col         &mm_qm_ex                  &kp KP_SLASH
                                                                                   &td_esc_scrl_slow                    &td_clk                            &td_bs    &kp ENTER  &td_space_nav
             >;
         };
