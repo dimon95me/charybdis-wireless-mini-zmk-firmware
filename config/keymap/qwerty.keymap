@@ -30,10 +30,9 @@
     // #define NUM     1
     // #define NAV     2
     // #define SYM     3
-    // #define GAME    4
-    // #define EXTRAS  5
-    // #define SLOW    6
-    // #define SCROLL  7
+    // #define EXTRAS  4
+    // #define SLOW    5
+    // #define SCROLL  6
 
     behaviors {
         ht_uni: ht_uni {
