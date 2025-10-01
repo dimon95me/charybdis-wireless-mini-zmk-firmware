@@ -2,15 +2,15 @@ layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
   - ESCAPE
-  - {t: Alt+ Z, h: Q}
-  - {t: Alt+ X, h: W}
-  - {t: Alt+ C, h: E}
-  - {t: Alt+ A, h: R}
-  - {t: Alt+ D, h: T}
+  - {t: Q, h: Alt+ Z}
+  - {t: W, h: Alt+ X}
+  - {t: E, h: Alt+ C}
+  - {t: R, h: Alt+ A}
+  - {t: T, h: Alt+ D}
   - Y
   - U
   - I
-  - {t: Gui+Sft+ O, h: O}
+  - {t: O, h: Sft+Gui+ O}
   - P
   - '['
   - TAB
@@ -26,10 +26,10 @@ layers:
   - {t: ;, h: RSHFT}
   - DEL
   - CAPSLOCK
-  - {t: Gui+ Z, h: Z}
-  - {t: Gui+ X, h: X}
-  - {t: Gui+ C, h: C}
-  - {t: Gui+ V, h: V}
+  - {t: Z, h: Gui+ Z}
+  - {t: X, h: Gui+ X}
+  - {t: C, h: Gui+ C}
+  - {t: V, h: Gui+ V}
   - B
   - N
   - M
