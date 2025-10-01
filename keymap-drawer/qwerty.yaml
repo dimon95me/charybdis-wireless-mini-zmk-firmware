@@ -2,11 +2,11 @@ layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
   - ESCAPE
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - {t: Alt+ Z, h: Q}
+  - {t: Alt+ X, h: W}
+  - {t: Alt+ C, h: E}
+  - {t: Alt+ A, h: R}
+  - {t: Alt+ D, h: T}
   - Y
   - U
   - I
@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RCTRL}
   - {t: ;, h: RSHFT}
   - DEL
-  - CLIP HIST
+  - CAPSLOCK
   - {t: Gui+ Z, h: Z}
   - {t: Gui+ X, h: X}
   - {t: Gui+ C, h: C}
@@ -76,9 +76,9 @@ layers:
   - MOVE R
   - ''
   - ''
-  - Gui+ Z
+  - UNDO
   - Alt+Gui+ LEFT
-  - Sft+Gui+ Z
+  - REDO
   - ''
   - ''
   - ''
@@ -128,48 +128,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  GAME:
-  - '1'
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '2'
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '3'
-  - LSHFT
-  - Y
-  - X
-  - C
-  - V
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - SPACE
-  - LEFT ALT
-  - ''
-  - ''
   EXTRAS:
   - ZMK Studio
   - SHRUG
@@ -201,7 +159,7 @@ layers:
   - COPY
   - PASTE
   - ''
-  - NEW DIR
+  - '&passs'
   - MUTE
   - VOLUME DOWN
   - VOLUME UP
@@ -308,3 +266,45 @@ combos:
   k: Mid CLK
 - p: [27, 28]
   k: R CLK
+- p: [1, 2]
+  k: '@'
+- p: [4, 3]
+  k: (
+- p: [7, 8]
+  k: )
+- p: [16, 17]
+  k: <
+- p: [18, 19]
+  k: '>'
+- p: [15, 16]
+  k: '['
+- p: [19, 20]
+  k: ']'
+- p: [30, 31]
+  k: '!'
+- p: [31, 32]
+  k: ','
+- p: [32, 33]
+  k: .
+- p: [33, 34]
+  k: '?'
+- p: [34, 22]
+  k: ''''
+- p: [22, 10]
+  k: '"'
+- p: [21, 20]
+  k: ':'
+- p: [21, 22]
+  k: ;
+- p: [10, 9]
+  k: '='
+- p: [9, 8]
+  k: _
+- p: [9, 21]
+  k: '-'
+- p: [28, 29]
+  k: /
+- p: [28, 27]
+  k: '|'
+- p: [27, 26]
+  k: \
