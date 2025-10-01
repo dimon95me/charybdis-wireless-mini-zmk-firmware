@@ -39,11 +39,10 @@ To see all the layers check out the [full render](keymap-drawer/qwerty.svg).
 | 1 | **NUM**    | Combined digits + F-keys (tap for numbers, hold for functions)   |
 | 2 | **NAV**    | Arrow keys, paging, TMUX navigation, mouse pointer               |
 | 3 | **SYM**    | Symbols, punctuation, and a couple of helpers                    |
-| 4 | **GAME**   | Gaming layer (just key-codes, no mods)                           |
-| 5 | **EXTRAS** | Shortcuts, functions & snippets                                  |
-| 6 | **MOUSE**  | Full mouse-key layer (pointer + wheel)                           |
-| 7 | **SLOW**   | Low-speed pointer for pixel-perfect work                         |
-| 8 | **SCROLL** | Vertical/Horizontal scroll layer                                 |
+| 4 | **EXTRAS** | Shortcuts, functions & snippets                                  |
+| 5 | **MOUSE**  | Full mouse-key layer (pointer + wheel)                           |
+| 6 | **SLOW**   | Low-speed pointer for pixel-perfect work                         |
+| 7 | **SCROLL** | Vertical/Horizontal scroll layer                                 |
 
 🏠 Home-Row Mods
 | Side                | Hold = Modifier              | Tap = Letter / Key  |

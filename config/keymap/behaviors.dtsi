@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&lt 7 ESC>, <&mo 6>; // tap → ESC, double tap → слой 6
+            bindings = <&lt 7 ESC>, <&mo 5>; // tap → ESC, double tap → слой 5
         };
 
         // --- Tap-dance: пробел или Layer 2 ---
@@ -114,26 +114,19 @@
             tapping-term-ms = <125>;
         };
 
-        // --- Tap-dance: переключение слоёв ---
-        td_layers: td_layer_swap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&to 0>, <&to 4>; // tap → слой 0, double tap → слой 4
-        };
-
         // --- Tap-dance: правый клик или Layer 8 ---
         td_clk_scrl: td_click_or_scroll {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&mo 8>;  // tap → правый клик, double tap → слой 8
+            bindings = <&mkp RCLK>, <&mo 7>;  // tap → правый клик, double tap → слой 7
         };
 
         // --- Tap-dance: базовый слой или extra ---
         td_bore: BASE_or_EXTRA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mo 5>, <&to 0>;  // tap → слой 5, double tap → слой 0
+            bindings = <&mo 4>, <&to 0>;  // tap → слой 4, double tap → слой 0
         };
 
         // --- Mod-morph: вопрос или восклицание ---
