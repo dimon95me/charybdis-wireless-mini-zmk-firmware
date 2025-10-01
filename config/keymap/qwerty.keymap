@@ -170,9 +170,9 @@
 
         BASE {
             bindings = <
-&kp ESCAPE    &ht_uni Q LA(Z)   &ht_uni W LA(X)   &ht_uni E LA(C)    &ht_uni R LA(A)  &ht_uni T LA(D)    &kp Y      &kp U             &kp I             &ht_uni O LG(LS(O))  &kp P                      &kp LEFT_BRACKET
+&kp ESCAPE    &ht_uni LA(Z) Q   &ht_uni LA(X) W   &ht_uni LA(C) E    &ht_uni LA(A) R  &ht_uni LA(D) T    &kp Y      &kp U             &kp I             &ht_uni LS(LG(O)) O  &kp P                      &kp LEFT_BRACKET
 &kp TAB       &ht_left LSHFT A  &ht_left LCTRL S  &ht_left LALT D    &ht_left LCMD F  &kp G              &kp H      &ht_right RCMD J  &ht_right LALT K  &ht_right RCTRL L    &ht_right RSHFT SEMICOLON  &kp DEL
-&kp CAPSLOCK  &ht_uni Z LG(Z)   &ht_uni X LG(X)   &ht_uni C LG(C)    &ht_uni V LG(V)  &kp B              &kp N      &kp M             &mm_cm_sc         &mm_pr_col           &mm_qm_ex                  &none
+&kp CAPSLOCK  &ht_uni LG(Z) Z   &ht_uni LG(X) X   &ht_uni LG(C) C    &ht_uni LG(V) V  &kp B              &kp N      &kp M             &mm_cm_sc         &mm_pr_col           &mm_qm_ex                  &none
                                                   &td_esc_scrl_slow  &td_clk          &td_bs             &kp ENTER  &td_space_nav
             >;
         };
