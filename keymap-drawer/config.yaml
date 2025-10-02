@@ -195,6 +195,7 @@ parse_config:
     "&td_bore": "L_BASE L_EXTRA",
     "&tdmt": "L1/BS LCLICK",
     "&tdbt": "L2/ESC RCLICK",
+    "&td_layers": "L_BASE L_GAME",
     "&td_cursor": "SCRL SLOW",
     "&td_home": "~/",
     "&td_equals": "=",
