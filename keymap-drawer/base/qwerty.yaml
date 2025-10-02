@@ -1,89 +1,49 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - SEARCH
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - ESCAPE
+  - {t: Q, h: Alt+ Z}
+  - {t: W, h: Alt+ X}
+  - {t: E, h: Alt+ C}
+  - {t: R, h: Alt+ A}
+  - {t: T, h: Alt+ D}
   - Y
   - U
   - I
-  - O
+  - {t: O, h: Sft+Gui+ O}
   - P
-  - L_BASE L_GAME
+  - '['
   - TAB
-  - {t: A, h: LCMD}
-  - {t: S, h: LALT}
-  - {t: D, h: LSHFT}
-  - {t: F, h: LCTRL}
+  - {t: A, h: LSHFT}
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: LCMD}
   - G
   - H
-  - {t: J, h: RCTRL}
-  - {t: K, h: RSHFT}
-  - {t: L, h: LALT}
-  - {t: ;, h: RCMD}
+  - {t: J, h: RCMD}
+  - {t: K, h: LALT}
+  - {t: L, h: RCTRL}
+  - {t: ;, h: RSHFT}
   - DEL
-  - CLIP HIST
-  - Z
-  - X
-  - C
-  - V
+  - CAPSLOCK
+  - {t: Z, h: Gui+ Z}
+  - {t: X, h: Gui+ X}
+  - {t: C, h: Gui+ C}
+  - {t: V, h: Gui+ V}
   - B
   - N
   - M
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - /
+  - ''
   - ESC SCRL SLOW
   - SYM LCLK
   - BS NUM
   - ENTER
   - SPACE NAV
-  NUM:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - +
-  - {t: '7', h: F7}
-  - {t: '8', h: F8}
-  - {t: '9', h: F9}
-  - {t: '%', h: F10}
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - BACK SPACE
-  - ''
-  - '-'
-  - {t: '4', h: F4}
-  - {t: '5', h: F5}
-  - {t: '6', h: F6}
-  - {t: '*', h: F11}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '='
-  - {t: '1', h: F1}
-  - {t: '2', h: F2}
-  - {t: '3', h: F3}
-  - {t: ., h: F12}
-  - /
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '0'
-  - SPACE
+  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', '', '', '', '', '',
+    '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', SPACE, KP 0]
   NAV:
   - ''
   - WHEEL L
@@ -91,23 +51,23 @@ layers:
   - ''
   - WHEEL U
   - WHEEL R
-  - TMUX DETCH
-  - TMUX ATTCH
-  - TMUX NEXT
-  - TMUX SESH
-  - TMUX SYNC
   - ''
-  - TAB
-  - BACK
-  - LALT
-  - LSHFT
-  - LCTRL
-  - FWD
-  - HSPLIT
+  - Gui+ [
+  - UP ARROW
+  - Gui+ ]
+  - ''
+  - ''
+  - ''
+  - LEFT SHIFT
+  - LEFT CONTROL
+  - LEFT ALT
+  - LEFT COMMAND
+  - ''
+  - ''
   - LEFT
   - DOWN
-  - UP
   - RIGHT
+  - ''
   - ''
   - ''
   - MOVE L
@@ -115,11 +75,11 @@ layers:
   - MOVE UP
   - MOVE R
   - ''
-  - VSPLIT
-  - HOME
-  - PG DN
-  - PG UP
-  - END
+  - ''
+  - UNDO
+  - Alt+Gui+ LEFT
+  - REDO
+  - ''
   - ''
   - ''
   - ''
@@ -241,7 +201,7 @@ layers:
   - COPY
   - PASTE
   - ''
-  - NEW DIR
+  - '&passs'
   - MUTE
   - VOLUME DOWN
   - VOLUME UP
@@ -348,3 +308,45 @@ combos:
   k: Mid CLK
 - p: [27, 28]
   k: R CLK
+- p: [1, 2]
+  k: '@'
+- p: [4, 3]
+  k: (
+- p: [7, 8]
+  k: )
+- p: [16, 17]
+  k: <
+- p: [18, 19]
+  k: '>'
+- p: [15, 16]
+  k: '['
+- p: [19, 20]
+  k: ']'
+- p: [30, 31]
+  k: '!'
+- p: [31, 32]
+  k: ','
+- p: [32, 33]
+  k: .
+- p: [33, 34]
+  k: '?'
+- p: [34, 22]
+  k: ''''
+- p: [22, 10]
+  k: '"'
+- p: [21, 20]
+  k: ':'
+- p: [21, 22]
+  k: ;
+- p: [10, 9]
+  k: '='
+- p: [9, 8]
+  k: _
+- p: [9, 21]
+  k: '-'
+- p: [28, 29]
+  k: /
+- p: [28, 27]
+  k: '|'
+- p: [27, 26]
+  k: \
