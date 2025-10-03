@@ -130,7 +130,7 @@ jobs:
         set -euo pipefail
 
         KM="${{ matrix.combo.keymap }}"
-        FM="${{ matrix.combo.format }}"   # bt | dongle | reset
+        FM="${{ matrix.combo.format }}"   # bt | reset
         NM="${{ matrix.combo.name }}"
         BD="${{ matrix.combo.board }}"    # nice_nano_v2
 
