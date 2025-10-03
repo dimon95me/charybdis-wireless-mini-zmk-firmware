@@ -13,7 +13,7 @@ layers:
   - {t: O, h: Sft+Gui+ O}
   - P
   - '['
-  - TAB
+  - {t: Alt+ TAB, h: TAB}
   - {t: A, h: LSHFT}
   - {t: S, h: LCTRL}
   - {t: D, h: LALT}
@@ -38,10 +38,10 @@ layers:
   - {t: '?', s: '!'}
   - ''
   - ESC SCRL SLOW
-  - SYM LCLK
-  - BS NUM
-  - ENTER
   - SPACE NAV
+  - L CLK
+  - ENTER
+  - BS NUM
   NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', '', '', '', '', '',
     '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', SPACE, KP 0]
   NAV:
@@ -52,9 +52,9 @@ layers:
   - WHEEL U
   - WHEEL R
   - ''
-  - Gui+ [
+  - Gui+ Z
   - UP ARROW
-  - Gui+ ]
+  - Gui+Sft+ Z
   - ''
   - ''
   - ''
@@ -76,9 +76,9 @@ layers:
   - MOVE R
   - ''
   - ''
-  - UNDO
+  - Gui+ [
   - Alt+Gui+ LEFT
-  - REDO
+  - Gui+ ]
   - ''
   - ''
   - ''
