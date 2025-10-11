@@ -184,7 +184,6 @@ layers:
   - OUT TOG
   - BT CLR
   - SLEEP
-  - sudo!!
   - ''
   - ''
   - ''

@@ -48,19 +48,6 @@
                 &kp LS(A) &kp P &kp P &kp R &kp O &kp V &kp E &kp D &kp EXCL
             >;
         };
-
-        //sudo: sudo { // SUDO_BANG_BANG
-        //    compatible = "zmk,behavior-macro";
-        //    #binding-cells = <0>;
-        //    wait-ms = <10>;
-        //    tap-ms = <20>;
-        //    bindings
-        //        = <&macro_tap &kp S &kp U &kp D &kp O>  // "sudo"
-        //        , <&macro_tap &kp SPACE>                // space
-        //        , <&macro_tap &kp EXCL &kp EXCL>        // "!!"
-        //        , <&macro_tap &kp RET>                  // Enter key
-        //        ;
-        //};
         
         clip_hist: clip_hist { // CLIPBOARD_HISTORY
             compatible = "zmk,behavior-macro";

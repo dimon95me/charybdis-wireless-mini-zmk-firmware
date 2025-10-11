@@ -212,7 +212,6 @@ parse_config:
     "&next_pane" : "TMUX NEXT",
     "&show_sessions": "TMUX SESH",
     "&sync_panes": "TMUX SYNC",
-    "&sudo": "sudo!!",
     "&code_blk": "```",
     "&home_dir": "~/"
   }
