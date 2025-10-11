@@ -36,36 +36,6 @@
             bindings = <&kp LC(B) &kp S>;
         };
 
-        create_or_attach: create_or_attach {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp T>
-                , <&macro_tap &kp M>
-                , <&macro_tap &kp U>
-                , <&macro_tap &kp X>
-                , <&macro_tap &kp SPC>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp W>
-                , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp E>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp I>
-                , <&macro_tap &kp O>
-                , <&macro_tap &kp N>
-                , <&macro_tap &kp SPC>
-                , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp A>
-                , <&macro_tap &kp SPC>
-                , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp S>
-                , <&macro_tap &kp SPC>
-            ;
-        };
-
         /*gcm: gcm { // git commit WIP
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -77,7 +47,7 @@
                 &kp MINUS &kp A &kp M &kp SPACE
                 &kp DQT &kp LS(W) &kp LS(I) &kp LS(P) &kp DQT
             >;
-        };
+        };*/
 
         lgtm: lgtm { // LGTM Approval
             compatible = "zmk,behavior-macro";
@@ -92,18 +62,18 @@
             >;
         };
 
-        sudo: sudo { // SUDO_BANG_BANG
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <20>;
-            bindings
-                = <&macro_tap &kp S &kp U &kp D &kp O>  // "sudo"
-                , <&macro_tap &kp SPACE>                // space
-                , <&macro_tap &kp EXCL &kp EXCL>        // "!!"
-                , <&macro_tap &kp RET>                  // Enter key
-                ;
-        };
+        //sudo: sudo { // SUDO_BANG_BANG
+        //    compatible = "zmk,behavior-macro";
+        //    #binding-cells = <0>;
+        //    wait-ms = <10>;
+        //    tap-ms = <20>;
+        //    bindings
+        //        = <&macro_tap &kp S &kp U &kp D &kp O>  // "sudo"
+        //        , <&macro_tap &kp SPACE>                // space
+        //        , <&macro_tap &kp EXCL &kp EXCL>        // "!!"
+        //        , <&macro_tap &kp RET>                  // Enter key
+        //        ;
+        //};
         
         clip_hist: clip_hist { // CLIPBOARD_HISTORY
             compatible = "zmk,behavior-macro";

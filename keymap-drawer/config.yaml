@@ -210,7 +210,6 @@ parse_config:
     "&td_space_nav": "SPACE NAV",
     "&td_bs": "BS NUM",
     "&detach_session": "TMUX DETCH",
-    "&create_or_attach": "TMUX ATTCH",
     "&next_pane" : "TMUX NEXT",
     "&show_sessions": "TMUX SESH",
     "&sync_panes": "TMUX SYNC",
