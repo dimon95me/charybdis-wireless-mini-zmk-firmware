@@ -13,7 +13,7 @@ layers:
   - {t: O, h: Sft+Gui+ O}
   - P
   - '['
-  - {t: Alt+ TAB, h: TAB}
+  - {t: TAB, h: Alt+ TAB}
   - {t: A, h: LSHFT}
   - {t: S, h: LCTRL}
   - {t: D, h: LALT}
