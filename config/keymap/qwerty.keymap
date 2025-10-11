@@ -170,19 +170,19 @@
 
         BASE {
             bindings = <
-&kp ESCAPE           &ht_uni LA(Z) Q   &ht_uni LA(X) W   &ht_uni LA(C) E    &ht_uni LA(A) R  &ht_uni LA(D) T    &kp Y      &kp U             &kp I             &ht_uni LS(LG(O)) O  &kp P                      &kp LEFT_BRACKET
-&ht_uni LA(TAB) TAB  &ht_left LSHFT A  &ht_left LCTRL S  &ht_left LALT D    &ht_left LCMD F  &kp G              &kp H      &ht_right RCMD J  &ht_right LALT K  &ht_right RCTRL L    &ht_right RSHFT SEMICOLON  &kp DEL
-&kp CAPSLOCK         &ht_uni LG(Z) Z   &ht_uni LG(X) X   &ht_uni LG(C) C    &ht_uni LG(V) V  &kp B              &kp N      &kp M             &none             &none                &none                      &none
-                                                         &lt 7              &td_space_nav    &mkp LCLK          &kp ENTER  &td_bs
+&kp CAPSLOCK         &ht_uni LA(Z) Q   &ht_uni LA(X) W   &ht_uni LA(C) E  &ht_uni LA(A) R  &ht_uni LA(D) T    &kp Y      &kp U             &kp I             &ht_uni LS(LG(O)) O  &kp P                      &kp LEFT_BRACKET
+&ht_uni LA(TAB) TAB  &ht_left LSHFT A  &ht_left LCTRL S  &ht_left LALT D  &ht_left LCMD F  &kp G              &kp H      &ht_right RCMD J  &ht_right LALT K  &ht_right RCTRL L    &ht_right RSHFT SEMICOLON  &kp SQT
+&kp ESCAPE           &ht_uni LG(Z) Z   &ht_uni LG(X) X   &ht_uni LG(C) C  &ht_uni LG(V) V  &kp B              &kp N      &kp M             &kp COMMA         &kp DOT              &kp SLASH                  &none
+                                                         &lt 7            &td_space_nav    &mkp LCLK          &kp ENTER  &td_bs
             >;
         };
 
         NUM {
             bindings = <
-&none  &none           &none             &none         &none             &none            &none       &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp BACKSPACE    &kp COMMA   &kp NUMBER_4     &kp NUMBER_5  &kp NUMBER_6  &kp KP_NUMBER_0  &none
-&none  &none           &none             &none         &none             &none            &kp KP_DOT  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                         &none         &none             &none            &none  &none
+&none  &none           &none             &none         &none             &none            &none       &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none            &none
+&none  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp BACKSPACE    &kp COMMA   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_NUMBER_0  &none
+&none  &none           &none             &none         &none             &none            &kp KP_DOT  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none            &none
+                                         &none         &none             &none            &none       &none
             >;
         };
 
@@ -215,10 +215,10 @@
 
         EXTRAS {
             bindings = <
-&studio_unlock   &none          &lgtm         &none          &none           &kp C_BRIGHTNESS_INC    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &out OUT_TOG     &bt BT_CLR
-&kp C_SLEEP      &none          &none         &none          &none           &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
-&kp C_AL_COFFEE  &none          &none         &none          &none           &none                   &passs        &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &none
-                                              &none          &none           &none                   &none         &none
+&studio_unlock   &none  &lgtm  &none  &none  &kp C_BRIGHTNESS_INC    &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2       &bt BT_SEL 3     &out OUT_TOG     &bt BT_CLR
+&kp C_SLEEP      &none  &none  &none  &none  &kp C_BRIGHTNESS_DEC    &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_STOP       &kp C_NEXT       &none
+&kp C_AL_COFFEE  &none  &none  &none  &none  &none                   &passs        &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PRINTSCREEN  &none
+                               &none  &none  &none                   &none         &none
             >;
         };
 
