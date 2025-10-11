@@ -199,7 +199,6 @@ parse_config:
     "&td_cursor": "SCRL SLOW",
     "&td_home": "~/",
     "&td_equals": "=",
-    "&shrug": "SHRUG",
     "&lgtm": "LGTM",
     "&gcm": "GIT COMMIT",
     "&clip_hist": "CLIP HIST",

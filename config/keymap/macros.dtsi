@@ -66,44 +66,7 @@
             ;
         };
 
-        shrug: shrug { // shrug emoji ¯\_(ツ)_/¯
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <20>;
-            bindings
-                // ¯ (Macros)
-                = <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N0 &kp N0 &kp A &kp F &kp SPC>
-                // \
-                , <&macro_tap &kp BACKSLASH>
-                , <&macro_tap &kp BACKSLASH>
-                // _
-                , <&macro_tap &kp UNDER>
-                // (
-                , <&macro_tap &kp LPAR>
-                // ツ (Katakana Letter Tu)
-                , <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N3 &kp N0 &kp C &kp N4 &kp SPC>
-                // )
-                , <&macro_tap &kp RPAR>
-                // _
-                , <&macro_tap &kp UNDER>
-                // /
-                , <&macro_tap &kp FSLH>
-                // ¯ (Macron)
-                , <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp U>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N0 &kp N0 &kp A &kp F &kp SPC>
-                ;
-        };
-
-        gcm: gcm { // git commit WIP
+        /*gcm: gcm { // git commit WIP
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <10>;
