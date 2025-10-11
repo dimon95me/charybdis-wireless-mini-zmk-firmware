@@ -24,15 +24,5 @@
                 &kp LS(A) &kp P &kp P &kp R &kp O &kp V &kp E &kp D &kp EXCL
             >;
         };
-        
-        code_blk: code_blk {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp GRAVE>
-                , <&macro_tap &kp GRAVE>
-                , <&macro_tap &kp GRAVE>
-                ;
-        };
     };
 };

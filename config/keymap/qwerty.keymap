@@ -199,7 +199,7 @@
             bindings = <
 &none  &none  &none     &kp CARET  &kp TILDE      &none        &kp PLUS      &kp AMPS   &kp LBKT  &kp RBKT  &kp PRCNT  &kp BSLH
 &none  &none  &kp LPAR  &kp RPAR   &kp BACKSPACE  &kp UNDER    &kp KP_MINUS  &kp GRAVE  &kp LBRC  &kp RBRC  &kp ASTRK  &kp PIPE
-&none  &none  &none     &kp HASH   &none          &kp DLLR     &kp EQUAL     &code_blk  &kp LT    &kp GT    &kp AT     &kp KP_SLASH
+&none  &none  &none     &kp HASH   &none          &kp DLLR     &kp EQUAL     &none      &kp LT    &kp GT    &kp AT     &kp KP_SLASH
                         &none      &trans         &trans       &trans        &trans
             >;
         };

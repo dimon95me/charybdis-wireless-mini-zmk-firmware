@@ -205,8 +205,7 @@ parse_config:
     "&studio_unlock": "ZMK Studio",
     "&td_esc_scrl_slow": "ESC SCRL SLOW",
     "&td_space_nav": "SPACE NAV",
-    "&td_bs": "BS NUM",
-    "&code_blk": "```"
+    "&td_bs": "BS NUM"
   }
   zmk_combos: {}
   zmk_preamble: "#define KEYMAP_DRAWER"
