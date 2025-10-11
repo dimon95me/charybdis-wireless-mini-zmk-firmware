@@ -56,7 +56,7 @@ layers:
   - UP ARROW
   - Gui+Sft+ Z
   - ''
-  - ''
+  - Ctl+ UP
   - ''
   - LEFT SHIFT
   - LEFT CONTROL
@@ -67,8 +67,8 @@ layers:
   - LEFT
   - DOWN
   - RIGHT
-  - ''
-  - ''
+  - Ctl+ LEFT
+  - Ctl+ RIGHT
   - ''
   - MOVE L
   - MOVE D
@@ -80,7 +80,7 @@ layers:
   - Alt+Gui+ LEFT
   - Gui+ ]
   - ''
-  - ''
+  - Ctl+ DOWN
   - ''
   - ''
   - ''
@@ -335,3 +335,7 @@ combos:
   k: ']'
 - p: [5, 3]
   k: '`'
+- p: [17, 31]
+  k: (
+- p: [17, 32]
+  k: )
