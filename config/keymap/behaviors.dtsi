@@ -144,23 +144,5 @@
             // tap = слой 5, double tap = слой 0
             bindings = <&mo 5>, <&to 0>;
         };
-
-        td_layer7_mods: td_layer7_mods {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-
-            // Сколько времени (в миллисекундах) между тапами считается одним «танцем»
-            tapping-term-ms = <200>;
-
-            // Порядок:
-            // 1 тап  → просто активировать слой 7
-            // 2 тапа → активировать слой 7 + Control
-            // 3 тапа → активировать слой 7 + Command
-            bindings = <
-                &mo 7                      // 1 tap
-                &hm LCTL 7                 // 2 taps  → Hold Mod (Control) + Layer 7
-                &hm LGUI 7                 // 3 taps  → Hold Mod (Command) + Layer 7
-            >;
-        };
     };
 };
