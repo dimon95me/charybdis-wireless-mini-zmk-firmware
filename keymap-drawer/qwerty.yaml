@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - ESCAPE
+  - CAPSLOCK
   - {t: Q, h: Alt+ Z}
   - {t: W, h: Alt+ X}
   - {t: E, h: Alt+ C}
@@ -24,8 +24,8 @@ layers:
   - {t: K, h: LALT}
   - {t: L, h: RCTRL}
   - {t: ;, h: RSHFT}
-  - DEL
-  - CAPSLOCK
+  - ''''
+  - ESCAPE
   - {t: Z, h: Gui+ Z}
   - {t: X, h: Gui+ X}
   - {t: C, h: Gui+ C}
@@ -33,17 +33,17 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
+  - ','
+  - .
+  - /
   - ''
-  - ESC SCRL SLOW
+  - '&lt 7'
   - SPACE NAV
   - L CLK
   - ENTER
   - BS NUM
-  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', '', '', '', '', '',
-    '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', SPACE, KP 0]
+  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', KP 0, '', '', '',
+    '', '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', '', '']
   NAV:
   - ''
   - WHEEL L
@@ -115,10 +115,10 @@ layers:
   - ''
   - ''
   - '#'
-  - ~/
+  - ''
   - $
   - '='
-  - '```'
+  - ''
   - <
   - '>'
   - '@'
@@ -172,8 +172,9 @@ layers:
   - ''
   EXTRAS:
   - ZMK Studio
+  - ''
   - LGTM
-  - GIT COMMIT
+  - ''
   - ''
   - BRIGHT ▲
   - {t: BT, h: '0'}
@@ -183,7 +184,7 @@ layers:
   - OUT TOG
   - BT CLR
   - SLEEP
-  - sudo!!
+  - ''
   - ''
   - ''
   - ''
@@ -195,10 +196,10 @@ layers:
   - NEXT
   - ''
   - LOCK
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - '&passs'
   - MUTE
@@ -296,56 +297,41 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [17, 18]
-  k: CAPS WORD
-  l: [BASE]
 - p: [38, 39]
   k: L_BASE L_EXTRA
-- p: [25, 26]
-  k: L CLK
 - p: [26, 27]
   k: Mid CLK
 - p: [27, 28]
   k: R CLK
-- p: [1, 2]
-  k: '@'
-- p: [4, 3]
-  k: (
-- p: [7, 8]
-  k: )
-- p: [16, 17]
-  k: <
-- p: [18, 19]
-  k: '>'
-- p: [15, 16]
-  k: '['
-- p: [19, 20]
-  k: ']'
-- p: [30, 31]
-  k: '!'
-- p: [31, 32]
-  k: ','
-- p: [32, 33]
-  k: .
-- p: [33, 34]
-  k: '?'
-- p: [34, 22]
-  k: ''''
-- p: [22, 10]
-  k: '"'
-- p: [21, 20]
-  k: ':'
-- p: [21, 22]
-  k: ;
-- p: [10, 9]
-  k: '='
-- p: [9, 8]
-  k: _
-- p: [9, 21]
-  k: '-'
-- p: [28, 29]
-  k: /
-- p: [28, 27]
+- p: [2, 3, 4]
+  k: Gui+ R
+- p: [29, 30]
   k: '|'
-- p: [27, 26]
+- p: [30, 31]
+  k: /
+- p: [29, 28]
   k: \
+- p: [17, 19]
+  k: '['
+- p: [17, 20]
+  k: ']'
+- p: [17, 18]
+  k: '!'
+- p: [7, 8]
+  k: '-'
+- p: [8, 9]
+  k: _
+- p: [9, 10]
+  k: '='
+- p: [17, 21]
+  k: '{'
+- p: [17, 22]
+  k: '}'
+- p: [25, 26, 24]
+  k: Gui+Alt+ Z
+- p: [31, 32, 33]
+  k: Gui+Ctl+Sft+ 4
+- p: [11, 9]
+  k: ']'
+- p: [5, 3]
+  k: '`'
