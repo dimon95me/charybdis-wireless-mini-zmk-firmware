@@ -50,109 +50,84 @@
     combos {
         compatible = "zmk,combos";
 
-        dog {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <1 2>;
+        xcode_run {
+            bindings = <&kp LG(R)>;
+            key-positions = <2 3 4>;
         };
 
-        lpar {
-            bindings = <&kp LPAR>;
-            key-positions = <4 3>;
-        };
-
-        rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <7 8>;
-        };
-
-        Less_Than {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <16 17>;
-        };
-
-        More_Than {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <18 19>;
-        };
-
-        LBKTt {
-            bindings = <&kp LBKT>;
-            key-positions = <15 16>;
-        };
-
-        RBKTt {
-            bindings = <&kp RBKT>;
-            key-positions = <19 20>;
-        };
-
-        Exclamationn {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <30 31>;
-        };
-
-        commma {
-            bindings = <&kp COMMA>;
-            key-positions = <31 32>;
-        };
-
-        dott {
-            bindings = <&kp DOT>;
-            key-positions = <32 33>;
-        };
-
-        QMARKk {
-            bindings = <&kp QMARK>;
-            key-positions = <33 34>;
-        };
-
-        apostrophe {
-            bindings = <&kp SQT>;
-            key-positions = <34 22>;
-        };
-
-        double_quotess {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <22 10>;
-        };
-
-        colonn {
-            bindings = <&kp COLON>;
-            key-positions = <21 20>;
-        };
-
-        semicolonn {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <21 22>;
-        };
-
-        equall {
-            bindings = <&kp EQUAL>;
-            key-positions = <10 9>;
-        };
-
-        underscoree {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <9 8>;
-        };
-
-        minuss {
-            bindings = <&kp MINUS>;
-            key-positions = <9 21>;
+        pipe_slashh {
+            bindings = <&kp PIPE>;
+            key-positions = <29 30>;
         };
 
         slashh {
             bindings = <&kp SLASH>;
-            key-positions = <28 29>;
-        };
-
-        pipee {
-            bindings = <&kp PIPE>;
-            key-positions = <28 27>;
+            key-positions = <30 31>;
         };
 
         backslashh {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <27 26>;
+            bindings = <&kp BSLH>;
+            key-positions = <29 28>;
+        };
+
+        left_brackett {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <17 19>;
+        };
+
+        right_brackett {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <17 20>;
+        };
+
+        exclamationn {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <17 18>;
+        };
+
+        minuss {
+            bindings = <&kp MINUS>;
+            key-positions = <7 8>;
+        };
+
+        underscoree {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <8 9>;
+        };
+
+        equall {
+            bindings = <&kp EQUAL>;
+            key-positions = <9 10>;
+        };
+
+        left_bracee {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <17 21>;
+        };
+
+        right_bracee {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <17 22>;
+        };
+
+        discard {
+            bindings = <&kp LG(LA(Z))>;
+            key-positions = <25 26 24>;
+        };
+
+        make_screenshot {
+            bindings = <&kp LG(LC(LS(N4)))>;
+            key-positions = <31 32 33>;
+        };
+
+        tverdyi_znak {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <11 9>;
+        };
+
+        yo {
+            bindings = <&kp GRAVE>;
+            key-positions = <5 3>;
         };
     };
 
