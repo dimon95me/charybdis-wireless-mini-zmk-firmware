@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             // tap = слой 0, double tap = слой 4
-            bindings = <&mo 7>, <&kp LCTRL &mo 7>;
+            bindings = <&mo 7>, <&mo 7 &ht_left LCTRL &none>;
         };
 
         // Tap Dance: клик или скролл
