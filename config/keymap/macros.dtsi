@@ -49,16 +49,6 @@
             >;
         };
         
-        new_dir: new_dir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp N>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                ;
-        };
-        
         code_blk: code_blk {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
