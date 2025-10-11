@@ -12,30 +12,6 @@
             bindings = <&macro_tap &kp LC(B) &kp DQT>;
         };
 
-        detach_session: detach_session {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp D>;
-        };
-
-        sync_panes: sync_panes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp SPACE>;
-        };
-
-        next_pane: next_pane {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp O>;
-        };
-
-        show_sessions: show_sessions {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp S>;
-        };
-
         lgtm: lgtm { // LGTM Approval
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
