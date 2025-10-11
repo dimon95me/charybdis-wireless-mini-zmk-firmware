@@ -2,20 +2,9 @@
     combos {
         compatible = "zmk,combos";
 
-        CapsWord {
-            bindings = <&caps_word>;
-            key-positions = <17 18>;
-            layers = <0>;
-        };
-
         combo_BASE_or_EXTRAS {
             bindings = <&td_bore>;
             key-positions = <38 39>;
-        };
-        
-        combo_left_click {
-            bindings = <&mkp LCLK>;
-            key-positions = <25 26>;
         };
         
         combo_middle_click {
