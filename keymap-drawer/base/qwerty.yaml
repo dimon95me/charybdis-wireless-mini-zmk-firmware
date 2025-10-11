@@ -339,3 +339,11 @@ combos:
   k: (
 - p: [17, 32]
   k: )
+- p: [16, 3, 2]
+  k: Gui+Sft+ F
+- p: [16, 3]
+  k: '&search_from_selected_macro'
+- p: [34, 33]
+  k: Sft+ 7
+- p: [22, 21]
+  k: Sft+ 6
