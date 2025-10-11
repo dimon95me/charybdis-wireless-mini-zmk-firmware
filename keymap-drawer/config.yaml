@@ -200,7 +200,6 @@ parse_config:
     "&td_home": "~/",
     "&td_equals": "=",
     "&lgtm": "LGTM",
-    "&gcm": "GIT COMMIT",
     "&clip_hist": "CLIP HIST",
     "&new_dir": "NEW DIR",
     "&py_iter": "PYTHON LOOP",

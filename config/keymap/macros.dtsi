@@ -36,19 +36,6 @@
             bindings = <&kp LC(B) &kp S>;
         };
 
-        /*gcm: gcm { // git commit WIP
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <20>;
-            bindings = <
-                &macro_tap &kp G &kp I &kp T &kp SPACE
-                &kp C &kp O &kp M &kp M &kp I &kp T &kp SPACE
-                &kp MINUS &kp A &kp M &kp SPACE
-                &kp DQT &kp LS(W) &kp LS(I) &kp LS(P) &kp DQT
-            >;
-        };*/
-
         lgtm: lgtm { // LGTM Approval
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
