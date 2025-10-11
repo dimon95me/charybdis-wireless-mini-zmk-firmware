@@ -131,36 +131,21 @@
         };
     };
 
-    // Макросы определены в корне
-    macro_control_layer7 {
-        compatible = "zmk,behavior-macro";
-        label = "CTRL_LAYER7";
-        #binding-cells = <0>;
-        bindings = <&kp LCTRL &sl 7>;
-    };
-
-    macro_command_layer7 {
-        compatible = "zmk,behavior-macro";
-        label = "CMD_LAYER7";
-        #binding-cells = <0>;
-        bindings = <&kp LGUI &sl 7>;
-    };
-
-    // Тап-данс после макросов
-    td_layer7_mods: td_layer7_mods {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-
-        // 1 tap  → включает sticky слой 7
-        // 2 taps → удерживает Control + включает sticky слой 7
-        // 3 taps → удерживает Command + включает sticky слой 7
-        bindings = <
-            &sl 7
-            &macro_control_layer7
-            &macro_command_layer7
-        >;
-    };
+  //  // Тап-данс после макросов
+  //  td_layer7_mods: td_layer7_mods {
+  //      compatible = "zmk,behavior-tap-dance";
+  //      #binding-cells = <0>;
+  //      tapping-term-ms = <200>;
+//
+  //      // 1 tap  → включает sticky слой 7
+  //      // 2 taps → удерживает Control + включает sticky слой 7
+  //      // 3 taps → удерживает Command + включает sticky слой 7
+  //      bindings = <
+  //          &sl 7
+  //          &macro_control_layer7
+  //          &macro_command_layer7
+  //      >;
+  //  };
 
     // Остальные макросы остаются внутри `macros`
     macros {
@@ -170,6 +155,21 @@
             bindings = <&kp W &kp A &kp R &kp M &kp N7 &kp RBRC &kp W &kp O &kp R &kp K &kp E &kp R &kp S &kp RBRC &kp RBRC &kp ENTER>;
             label = "PASSS";
         };
+
+     //  // Макросы определены в корне
+     //  macro_control_layer7 {
+     //      compatible = "zmk,behavior-macro";
+     //      label = "CTRL_LAYER7";
+     //      #binding-cells = <0>;
+     //      bindings = <&kp LCTRL &sl 7>;
+     //  };
+
+     //  macro_command_layer7 {
+     //      compatible = "zmk,behavior-macro";
+     //      label = "CMD_LAYER7";
+     //      #binding-cells = <0>;
+     //      bindings = <&kp LGUI &sl 7>;
+     //  };
     };
 
     keymap {
@@ -180,7 +180,7 @@
 &kp CAPSLOCK         &ht_uni LA(Z) Q   &ht_uni LA(X) W   &ht_uni LA(C) E  &ht_uni LA(A) R  &ht_uni LA(D) T    &kp Y      &kp U             &kp I             &ht_uni LS(LG(O)) O  &kp P                      &kp LEFT_BRACKET
 &ht_uni LA(TAB) TAB  &ht_left LSHFT A  &ht_left LCTRL S  &ht_left LALT D  &ht_left LCMD F  &kp G              &kp H      &ht_right RCMD J  &ht_right LALT K  &ht_right RCTRL L    &ht_right RSHFT SEMICOLON  &kp SQT
 &kp ESCAPE           &ht_uni LG(Z) Z   &ht_uni LG(X) X   &ht_uni LG(C) C  &ht_uni LG(V) V  &kp B              &kp N      &kp M             &kp COMMA         &kp DOT              &kp SLASH                  &none
-                                                         &td_layer7_mods  &td_space_nav    &mkp LCLK          &kp ENTER  &td_bs
+                                                         &td_scroll       &td_space_nav    &mkp LCLK          &kp ENTER  &td_bs
             >;
         };
 
