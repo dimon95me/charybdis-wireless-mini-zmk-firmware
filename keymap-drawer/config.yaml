@@ -203,7 +203,6 @@ parse_config:
     "&py_iter": "PYTHON LOOP",
     "&js_iter": "JS LOOP",
     "&studio_unlock": "ZMK Studio",
-    "&td_esc_scrl_slow": "ESC SCRL SLOW",
     "&td_space_nav": "SPACE NAV",
     "&td_bs": "BS NUM"
   }
