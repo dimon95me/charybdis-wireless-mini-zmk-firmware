@@ -49,16 +49,6 @@
             >;
         };
         
-        clip_hist: clip_hist { // CLIPBOARD_HISTORY
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp V>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        
         new_dir: new_dir {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
