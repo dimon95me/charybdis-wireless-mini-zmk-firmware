@@ -1,33 +1,36 @@
-#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22  // Left-hand keys.
-#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 16 15 14 13  // Right-hand keys.
-#define THUMBS 36 37 38 39 40  // Thumb keys.
+// Определение групп клавиш по их позициям в матрице
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22  // Левая рука
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 16 15 14 13  // Правая рука
+#define THUMBS 36 37 38 39 40  // Клавиши под большие пальцы
 
 / {
     behaviors {
+
+        // Homerow-mod базовый (основа для модификаторов)
         ht_num_func: homerow_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <175>; // triggers the hold behavior when the tapping-term-ms has expired
-            quick-tap-ms = <150>; // If you press a tapped hold-tap again within quick-tap-ms milliseconds of the first press, it will always trigger the tap behavior.
-            require-prior-idle-ms = <185>; // like quick-tap-ms however it will apply for any non-modifier key pressed before it
-            bindings = <&kp>, <&kp>;  // hold, tap
+            flavor = "tap-preferred"; // если нажато коротко — регистрируется tap
+            tapping-term-ms = <175>;  // время в мс до срабатывания hold
+            quick-tap-ms = <150>;     // повторный tap в это время — считается tap
+            require-prior-idle-ms = <185>; // предотвращает конфликт с предыдущими нажатиями
+            bindings = <&kp>, <&kp>;  // 1-й параметр = hold, 2-й = tap
         };
 
-        // Left-hand HRM
+        // Левая сторона — homerow mod
         ht_left: left_side_homerow_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
+            flavor = "balanced";       // баланс между tap и hold
+            tapping-term-ms = <280>;   // большее время — т.к. левая рука часто держит моды
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R THUMBS>; // срабатывает hold, если нажаты клавиши правой руки
+            hold-trigger-on-release;   // hold активируется при отпускании клавиши
         };
 
-        // Right-hand HRM
+        // Правая сторона — homerow mod
         ht_right: right_side_homerow_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -36,33 +39,39 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>; // зеркально левой руке
             hold-trigger-on-release;
         };
 
+        // Tap Dance: пробел / навигация
         td_space_nav: td_space {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <120>;
-            bindings = <&lt 2 SPACE>, <&kp SPACE>; // hold, tap, double_tap
+            // при удержании — активирует слой 2, при коротком нажатии — пробел
+            bindings = <&lt 2 SPACE>, <&kp SPACE>; // hold = &lt 2 (Layer Tap на слой 2), tap = SPACE
         };
 
+        // Hold-tap: слой / клик
         mo_clk: mo_click {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <40>;
-            hold-while-undecided;
-            bindings = <&mo>, <&mkp>;
+            flavor = "hold-preferred"; // приоритет удержания
+            tapping-term-ms = <40>;    // очень короткое время для точного срабатывания
+            hold-while-undecided;      // держит состояние, пока не решит tap/hold
+            bindings = <&mo>, <&mkp>;  // hold = переключает слой, tap = mouse key press
         };
 
+        // Tap Dance: клик / слой
         td_clk: td_clk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_clk 3 LCLK>, <&mkp LCLK>; // hold, tap, double_tap
+            // hold = mo_clk (слой + клик), tap = просто левый клик
+            bindings = <&mo_clk 3 LCLK>, <&mkp LCLK>;
         };
 
+        // Hold-tap: слой / обычная клавиша
         mo_kp: mo_kp {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -72,13 +81,16 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // Tap Dance: backspace / слой
         td_bs: td_bs {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <170>;
-            bindings = <&mo_kp 1 BACKSPACE>, <&kp BACKSPACE>; // hold, tap, double_tap
+            // hold = слой 1, tap = backspace
+            bindings = <&mo_kp 1 BACKSPACE>, <&kp BACKSPACE>;
         };
 
+        // Hold-tap: переход между слоями
         httl: ht_two_layers {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&to>;
@@ -87,32 +99,40 @@
             tapping-term-ms = <125>;
         };
 
+        // Tap Dance: переключение слоёв
         td_layers: td_layer_swap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&to 4>; // tap, double_tap
+            // tap = слой 0, double tap = слой 4
+            bindings = <&to 0>, <&to 4>;
         };
 
+        // Tap Dance: клик или скролл
         td_clk_scrl: td_click_or_scroll {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&mkp RCLK>, <&mo 8>;  // tap/hold, double_tap
+            // tap = правая кнопка мыши, double tap = слой 8 (scroll mode)
+            bindings = <&mkp RCLK>, <&mo 8>;
         };
 
+        // Tap Dance: базовый слой или extras
         td_bore: BASE_or_EXTRA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
+            // tap = слой 5, double tap = слой 0
             bindings = <&mo 5>, <&to 0>;
         };
 
+        // Mod-morph: ? и !
         mm_qm_ex: question_exclamation {
             compatible    = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings      = <&kp QUESTION>, <&kp EXCLAMATION>;
-            mods          = <(MOD_LSFT | MOD_RSFT)>;
+            bindings      = <&kp QUESTION>, <&kp EXCLAMATION>; // базовый и shift-вариант
+            mods          = <(MOD_LSFT | MOD_RSFT)>;           // активируется при Shift
         };
 
+        // Mod-morph: . и :
         mm_pr_col: period_colon {
             compatible    = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -120,6 +140,7 @@
             mods          = <(MOD_LSFT | MOD_RSFT)>;
         };
 
+        // Mod-morph: , и ;
         mm_cm_sc: comma_semi_colon {
             compatible    = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
