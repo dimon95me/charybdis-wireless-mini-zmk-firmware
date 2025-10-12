@@ -37,7 +37,7 @@ layers:
   - .
   - /
   - ''
-  - '&ctrl_scroll'
+  - SCROLL
   - SPACE NAV
   - L CLK
   - ENTER
@@ -255,6 +255,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SCROLL:
+  - {t: LC, h: sticky}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -290,8 +291,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
