@@ -42,7 +42,7 @@
         ht_left: left_side_homerow_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";       // баланс между tap и hold
+            flavor = "hold-preferred";       // баланс между tap и hold
             tapping-term-ms = <280>;   // большее время — т.к. левая рука часто держит моды
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
@@ -55,7 +55,7 @@
         ht_right: right_side_homerow_mod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
