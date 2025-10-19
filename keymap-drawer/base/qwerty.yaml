@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - CAPSLOCK
+  - '&tab_tap_dance'
   - {t: Q, h: Alt+ Z}
   - {t: W, h: Alt+ X}
   - {t: E, h: Alt+ C}
@@ -13,7 +13,7 @@ layers:
   - {t: O, h: Sft+Gui+ O}
   - P
   - '['
-  - {t: TAB, h: Alt+ TAB}
+  - CAPSLOCK
   - {t: A, h: LSHFT}
   - {t: S, h: LCTRL}
   - {t: D, h: LALT}
@@ -35,7 +35,7 @@ layers:
   - M
   - ','
   - .
-  - /
+  - {t: /, h: Gui+ /}
   - ''
   - SCROLL
   - SPACE NAV
@@ -183,7 +183,7 @@ layers:
   - {t: BT, h: '3'}
   - OUT TOG
   - BT CLR
-  - SLEEP
+  - Ctl+Gui+ Q
   - ''
   - ''
   - ''
@@ -347,3 +347,5 @@ combos:
   k: Sft+ 7
 - p: [22, 21]
   k: Sft+ 6
+- p: [37, 40]
+  k: CAPSLOCK
