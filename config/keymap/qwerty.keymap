@@ -159,6 +159,11 @@
             bindings = <&kp LS(N6)>;
             key-positions = <22 21>;
         };
+
+        capss {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <37 40>;
+        };
     };
 
     macros {
