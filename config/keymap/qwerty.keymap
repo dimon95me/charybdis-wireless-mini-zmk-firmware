@@ -79,12 +79,14 @@ key-positions = <29 28>;
 
 left_brackett {
 bindings = <&kp LEFT_BRACKET>;
-key-positions = <21 40 19 20>;
+key-positions = <17 31>;
+timeout-ms = <300>;
 };
 
 right_brackett {
 bindings = <&kp RIGHT_BRACKET>;
-key-positions = <22 21 20 40>;
+key-positions = <32 17>;
+timeout-ms = <300>;
 };
 
 exclamationn {
@@ -109,17 +111,20 @@ key-positions = <9 10>;
 
 left_bracee {
 bindings = <&kp LEFT_BRACE>;
-key-positions = <19 40 20>;
+key-positions = <19 17>;
+timeout-ms = <300>;
 };
 
 right_bracee {
 bindings = <&kp RIGHT_BRACE>;
-key-positions = <17 20 21 40>;
+key-positions = <17 20>;
+timeout-ms = <300>;
 };
 
 discard {
 bindings = <&kp LG(LA(Z))>;
 key-positions = <25 26 24>;
+timeout-ms = <500>;
 };
 
 make_screenshot {
@@ -130,21 +135,25 @@ key-positions = <31 32 33>;
 tverdyi_znak {
 bindings = <&kp RIGHT_BRACKET>;
 key-positions = <11 9>;
+timeout-ms = <300>;
 };
 
 yo {
 bindings = <&kp GRAVE>;
 key-positions = <5 3>;
+timeout-ms = <300>;
 };
 
 lparr {
 bindings = <&kp LEFT_PARENTHESIS>;
 key-positions = <40 31 32>;
+timeout-ms = <300>;
 };
 
 rparr {
 bindings = <&kp RIGHT_PARENTHESIS>;
 key-positions = <32 33 40>;
+timeout-ms = <300>;
 };
 
 global_search {
