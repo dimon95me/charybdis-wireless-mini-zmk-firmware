@@ -14,7 +14,7 @@ FALLBACK_BINARY="${FALLBACK_BINARY:-bin}"          # fallback firmware extension
 SCRIPT_PATH="$REPO_ROOT/scripts/convert_keymap.py" # path to script that converts keymaps
 
 
-# --- ZMK WORKSPACE ---
+# --- ZMK WORKSPACE ---≈
 echo "🛠️  Setting up ZMK workspace with west..."
 
 # Only init if not already initialized (i.e., .west folder doesn't exist)
