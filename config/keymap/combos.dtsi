@@ -5,6 +5,7 @@
         combo_BASE_or_EXTRAS {
             bindings = <&td_bore>;
             key-positions = <38 39>;
+            timeout-ms = <300>;
         };
         
         combo_middle_click {

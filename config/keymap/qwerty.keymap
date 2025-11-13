@@ -92,21 +92,25 @@ timeout-ms = <300>;
 exclamationn {
 bindings = <&kp EXCLAMATION>;
 key-positions = <17 18>;
+timeout-ms = <300>;
 };
 
 minuss {
 bindings = <&kp MINUS>;
 key-positions = <7 8>;
+timeout-ms = <300>;
 };
 
 underscoree {
 bindings = <&kp UNDERSCORE>;
 key-positions = <8 9>;
+timeout-ms = <300>;
 };
 
 equall {
 bindings = <&kp EQUAL>;
 key-positions = <9 10>;
+timeout-ms = <300>;
 };
 
 left_bracee {
@@ -159,26 +163,31 @@ timeout-ms = <300>;
 global_search {
 bindings = <&kp LG(LS(F))>;
 key-positions = <16 3 2>;
+timeout-ms = <300>;
 };
 
 search_from_selected {
 bindings = <&search_from_selected_macro>;
 key-positions = <16 3>;
+timeout-ms = <300>;
 };
 
 ampersant_or_question {
 bindings = <&kp LS(N7)>;
 key-positions = <34 33>;
+timeout-ms = <300>;
 };
 
 dvokrapka_rus {
 bindings = <&kp LS(N6)>;
 key-positions = <22 21>;
+timeout-ms = <300>;
 };
 
 capss {
 bindings = <&kp CAPSLOCK>;
 key-positions = <37 40>;
+timeout-ms = <300>;
 };
 };
 
