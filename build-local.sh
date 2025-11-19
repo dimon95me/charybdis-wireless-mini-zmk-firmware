@@ -19,7 +19,13 @@ ensure_docker() {
 
 main() {
   ensure_docker
-  (cd "$REPO_ROOT/local-build" && docker-compose run --rm builder)
+  (
+    cd "$REPO_ROOT/local-build"
+    docker-compose run --rm \
+      -e SKIP_WEST_UPDATE="${SKIP_WEST_UPDATE:-}" \
+      -e FORCE_WEST_UPDATE="${FORCE_WEST_UPDATE:-}" \
+      builder
+  )
 }
 
 main "$@"
