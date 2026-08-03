@@ -14,7 +14,7 @@ FALLBACK_BINARY="${FALLBACK_BINARY:-bin}"          # fallback firmware extension
 SCRIPT_PATH="$REPO_ROOT/scripts/convert_keymap.py" # path to script that converts keymaps
 
 
-# --- ZMK WORKSPACE ---≈
+# --- ZMK WORKSPACE ---
 echo "🛠️  Setting up ZMK workspace with west..."
 
 # Only init if not already initialized (i.e., .west folder doesn't exist)
@@ -27,13 +27,9 @@ fi
 git config --global --add safe.directory /workspaces/zmk/zephyr
 git config --global --add safe.directory /workspaces/zmk/zmk
 
-# Always update to fetch all modules and dependencies (opt-in via FORCE_WEST_UPDATE)
-if [ "${FORCE_WEST_UPDATE:-0}" = "1" ]; then
-    echo "🛠️  Updating west modules... (FORCE_WEST_UPDATE=1)"
-    west update
-else
-    echo "🛠️  Skipping west update (default). Set FORCE_WEST_UPDATE=1 to refresh ZMK/Zephyr."
-fi
+# Always update to fetch all modules and dependencies
+echo "🛠️  Updating west modules..."
+west update
 
 # Set environment variables in the current shell
 echo "🛠️  Setting Zephyr build environment..."
@@ -41,11 +37,7 @@ west zephyr-export
 
 # Set permissions so users can delete them
 echo "🛠️  Setting permissions on ZMK resources:"
-for path in .west zmk zephyr modules zmk-pmw3610-driver; do
-  if [ -e "$path" ]; then
-    chmod -R 777 "$path" || true
-  fi
-done
+chmod -R 777 .west zmk zephyr modules zmk-pmw3610-driver
 
 # # Optional: confirm checkout
 # echo "🛠️  West workspace ready. Project structure:"
