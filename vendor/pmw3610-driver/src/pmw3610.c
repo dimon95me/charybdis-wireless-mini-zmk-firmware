@@ -630,6 +630,69 @@ static int pmw3610_report_data(const struct device *dev) {
     // fetch report value
     int16_t rx = (int16_t)CLAMP(dx, INT16_MIN, INT16_MAX);
     int16_t ry = (int16_t)CLAMP(dy, INT16_MIN, INT16_MAX);
+
+    // --- Outlier filter: clamp single-report deltas that exceed threshold ---
+    // Hardware root cause: sensor distance << 7.9mm → defocused → noise spikes up to ±256
+    // Normal movement deltas are 0-60; clamp to threshold to mask false spikes
+    #define PMW3610_OUTLIER_MAX 50
+    if (rx > PMW3610_OUTLIER_MAX) rx = PMW3610_OUTLIER_MAX;
+    if (rx < -PMW3610_OUTLIER_MAX) rx = -PMW3610_OUTLIER_MAX;
+    if (ry > PMW3610_OUTLIER_MAX) ry = PMW3610_OUTLIER_MAX;
+    if (ry < -PMW3610_OUTLIER_MAX) ry = -PMW3610_OUTLIER_MAX;
+
+    // --- Adaptive reinit: restart sensor when delta trend is systematically high ---
+    // Detects progressive drift (confirmed by HID monitoring: max|delta| grows
+    // from ~55 to 256 over 60s). Triggers full sensor power-up-reset to
+    // clear accumulated tracking error. Only fires when sensor is actually
+    // degraded — does NOT run on a fixed timer.
+    {
+        #define PMW3610_REINIT_WINDOW_SAMPLES 40   // ~40 bursts (~160ms at 4ms rate)
+        #define PMW3610_REINIT_THRESHOLD 40
+        #define PMW3610_REINIT_CONSECUTIVE 150      // ~250 reports before trigger (~3s at 12ms)
+
+        static int16_t reinit_window[PMW3610_REINIT_WINDOW_SAMPLES];
+        static uint32_t reinit_idx;
+        static int32_t reinit_sum;
+        static uint32_t reinit_consecutive;
+
+        int16_t abs_delta = (abs(rx) + abs(ry)) / 2;
+
+        // Update sliding window
+        reinit_sum -= reinit_window[reinit_idx];
+        reinit_window[reinit_idx] = abs_delta;
+        reinit_sum += abs_delta;
+        reinit_idx++;
+        if (reinit_idx >= PMW3610_REINIT_WINDOW_SAMPLES) reinit_idx = 0;
+
+        int16_t avg = reinit_sum / PMW3610_REINIT_WINDOW_SAMPLES;
+
+        if (avg > PMW3610_REINIT_THRESHOLD) {
+            reinit_consecutive++;
+            if (reinit_consecutive >= PMW3610_REINIT_CONSECUTIVE) {
+                LOG_WRN("Adaptive reinit: sliding avg %d > %d for %u consecutive. "
+                        "Triggering sensor reset.", avg, PMW3610_REINIT_THRESHOLD,
+                        reinit_consecutive);
+                // Reset local state
+                reinit_consecutive = 0;
+                memset(reinit_window, 0, sizeof(reinit_window));
+                reinit_sum = 0;
+                reinit_idx = 0;
+                dx = 0;
+                dy = 0;
+                drop_motion_bursts = PMW3610_DROP_BURSTS_AFTER_WAKE;
+                last_performance_enabled = false;
+                // Trigger full async reinit
+                data->ready = false;
+                pmw3610_set_interrupt(dev, false);
+                data->async_init_step = ASYNC_INIT_STEP_POWER_UP;
+                k_work_schedule(&data->init_work, K_NO_WAIT);
+                return 0;
+            }
+        } else {
+            reinit_consecutive = 0;
+        }
+    }
+
     bool have_x = rx != 0;
     bool have_y = ry != 0;
 
