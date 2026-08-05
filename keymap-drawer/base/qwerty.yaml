@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: qwerty}
 layers:
   BASE:
-  - '&tab_tap_dance'
+  - ESCAPE
   - {t: Q, h: Alt+ Z}
   - {t: W, h: Alt+ X}
   - {t: E, h: Alt+ C}
@@ -13,7 +13,7 @@ layers:
   - {t: O, h: Sft+Gui+ O}
   - P
   - '['
-  - CAPSLOCK
+  - '&tab_tap_dance'
   - {t: A, h: LSHFT}
   - {t: S, h: LCTRL}
   - {t: D, h: LALT}
@@ -25,7 +25,7 @@ layers:
   - {t: L, h: RCTRL}
   - {t: ;, h: RSHFT}
   - ''''
-  - ESCAPE
+  - ''
   - {t: Z, h: Gui+ Z}
   - {t: X, h: Gui+ X}
   - {t: C, h: Gui+ C}
@@ -311,9 +311,9 @@ combos:
   k: /
 - p: [29, 28]
   k: \
-- p: [17, 19]
+- p: [17, 31]
   k: '['
-- p: [17, 20]
+- p: [32, 17]
   k: ']'
 - p: [17, 18]
   k: '!'
@@ -323,9 +323,9 @@ combos:
   k: _
 - p: [9, 10]
   k: '='
-- p: [17, 21]
+- p: [19, 17]
   k: '{'
-- p: [17, 22]
+- p: [17, 20]
   k: '}'
 - p: [25, 26, 24]
   k: Gui+Alt+ Z
@@ -335,9 +335,9 @@ combos:
   k: ']'
 - p: [5, 3]
   k: '`'
-- p: [17, 31]
+- p: [40, 31, 32]
   k: (
-- p: [17, 32]
+- p: [32, 33, 40]
   k: )
 - p: [16, 3, 2]
   k: Gui+Sft+ F
