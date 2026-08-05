@@ -184,6 +184,11 @@ alt_backspace {
     bindings = <&kp LA(BACKSPACE)>;
     key-positions = <30 40>;
 };
+
+paste_no_format {
+    bindings = <&kp LG(LS(V))>;
+    key-positions = <28 36>;
+};
 };
 
 macros {

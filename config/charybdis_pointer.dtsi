@@ -9,9 +9,9 @@
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
         &zip_xy_scaler 5 5>;
 
-    /* layer-8 scroll override */
+    /* layer-6 scroll override */
     scroller: scroller {
-        layers           = <7>;
+        layers           = <6>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) // Software invert (RES_STEP не сбрасывается)
             &zip_xy_scaler 1 15                              // Scales the scroll speed
@@ -20,9 +20,9 @@
         >;
     };
 
-    /* layer-7 slow-pointer override */
+    /* layer-5 slow-pointer override */
     slow_pointer: slow_pointer {
-        layers           = <6>;
+        layers           = <5>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) // Software invert (RES_STEP не сбрасывается)
             &zip_xy_scaler 2 6>;
