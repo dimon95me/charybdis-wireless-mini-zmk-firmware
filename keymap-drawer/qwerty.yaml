@@ -36,14 +36,14 @@ layers:
   - ','
   - .
   - {t: /, h: Gui+ /}
-  - ''
+  - CAPSLOCK
   - SCROLL
   - SPACE NAV
   - L CLK
   - ENTER
   - BS NUM
-  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', KP 0, '', '', '',
-    '', '', '', '', KP DOT, '1', '2', '3', '', '', '', '', '', '', '']
+  NUM: ['', '', '', '', '', '', '', '7', '8', '9', '', '', '', LEFT SHIFT, LEFT CONTROL, LEFT ALT, LEFT COMMAND, BACK SPACE, ',', '4', '5', '6', '0', '', '', '',
+    '', '', '', '', ., '1', '2', '3', '', '', '', '', '', '', '']
   NAV:
   - ''
   - WHEEL L
@@ -128,48 +128,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  GAME:
-  - '1'
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '2'
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '3'
-  - LSHFT
-  - Y
-  - X
-  - C
-  - V
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - SPACE
-  - LEFT ALT
-  - ''
-  - ''
   EXTRAS:
   - ZMK Studio
   - ''
@@ -349,3 +307,7 @@ combos:
   k: Sft+ 6
 - p: [37, 40]
   k: CAPSLOCK
+- p: [30, 40]
+  k: Alt+ BACK SPACE
+- p: [28, 37]
+  k: Gui+Sft+ V
