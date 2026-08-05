@@ -20,7 +20,7 @@
 │ httl           │ переход на слой              │ временный слой              │ —                  │ hold-tap       │
 │ td_layers      │ слой 0                       │ —                           │ слой 4             │ tap-dance      │
 │ td_clk_scrl    │ правая кнопка мыши           │ слой 8 (scroll mode)        │ —                  │ tap-dance      │
-│ td_bore        │ слой 5                       │ —                           │ слой 0             │ tap-dance      │
+│ td_bore        │ слой 4 (extras)      │ —                           │ слой 0 (base)      │ tap-dance      │
 ──────────────────────────────────────────────────────────────
 */
 
@@ -141,16 +141,16 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            // tap = правая кнопка мыши, double tap = слой 8 (scroll mode)
-            bindings = <&mkp RCLK>, <&mo 8>;
+    // tap = правая кнопка мыши, double tap = слой 6 (scroll mode)
+    bindings = <&mkp RCLK>, <&mo 6>;
         };
 
         // Tap Dance: базовый слой или extras
         td_bore: BASE_or_EXTRA {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            // tap = слой 5, double tap = слой 0
-            bindings = <&mo 5>, <&to 0>;
+            // tap = слой 4 (extras), double tap = слой 0 (base)
+            bindings = <&mo 4>, <&to 0>;
         };
     };
 };
