@@ -187,7 +187,7 @@ alt_backspace {
 
 paste_no_format {
     bindings = <&kp LG(LS(V))>;
-    key-positions = <28 36>;
+    key-positions = <28 37>;
 };
 };
 
