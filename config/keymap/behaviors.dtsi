@@ -152,5 +152,14 @@
             // tap = слой 4 (extras), double tap = слой 0 (base)
             bindings = <&mo 4>, <&to 0>;
         };
+
+        // Сброс сенсора трекбола (PMW3610) — power-up reset + переконфигурация.
+        // Вызывается комбо 23+35. Нужен, когда трекбол «ускоряется» из-за
+        // накопленного состояния сенсора (расфокус). Реализация — в
+        // vendor/pmw3610-driver/src/behavior_sensor_reset.c
+        sensor_reset: sensor_reset {
+            compatible = "zmk,behavior-sensor-reset";
+            #binding-cells = <0>;
+        };
     };
 };

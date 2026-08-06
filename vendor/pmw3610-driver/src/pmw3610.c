@@ -713,6 +713,28 @@ static int pmw3610_report_data(const struct device *dev) {
     return err;
 }
 
+int pmw3610_request_reset(const struct device *dev)
+{
+    struct pixart_data *data = dev->data;
+
+    if (!data->ready) {
+        LOG_WRN("PMW3610 reset requested but reinit already in progress");
+        return -EBUSY;
+    }
+
+    LOG_WRN("Manual PMW3610 reset requested (key combo)");
+
+    // Trigger full async reinit (power-up reset + reconfigure), same path as
+    // stuck-motion recovery / adaptive reinit. Non-blocking: only schedules
+    // init_work; the key event context returns immediately.
+    data->ready = false;
+    pmw3610_set_interrupt(dev, false);
+    data->async_init_step = ASYNC_INIT_STEP_POWER_UP;
+    k_work_schedule(&data->init_work, K_NO_WAIT);
+
+    return 0;
+}
+
 static void pmw3610_gpio_callback(const struct device *gpiob, struct gpio_callback *cb,
                                   uint32_t pins) {
     struct pixart_data *data = CONTAINER_OF(cb, struct pixart_data, irq_gpio_cb);

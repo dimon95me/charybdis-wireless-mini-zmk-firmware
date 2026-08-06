@@ -120,6 +120,9 @@ enum pmw3610_alt_attribute {
 
 };
 
+/** @brief Trigger a full sensor power-up reset + reconfigure (e.g. from a key combo). */
+int pmw3610_request_reset(const struct device *dev);
+
 #ifdef __cplusplus
 }
 #endif

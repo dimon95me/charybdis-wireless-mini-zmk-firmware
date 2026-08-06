@@ -1,0 +1,15 @@
+# Copyright (c) 2026 The Keyboard Project
+# SPDX-License-Identifier: MIT
+
+description: |
+  Resets the PMW3610 trackball sensor. Triggers a full power-up reset and
+  reconfiguration (the same async reinit path as stuck-motion recovery and
+  adaptive reinit in the vendored pmw3610 driver). Bound via combo 23+35.
+
+compatible: "zmk,behavior-sensor-reset"
+
+properties:
+  "#binding-cells":
+    type: int
+    required: true
+    const: 0
