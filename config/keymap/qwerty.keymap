@@ -182,7 +182,7 @@ capss {
 
 alt_backspace {
     bindings = <&kp LA(BACKSPACE)>;
-    key-positions = <30 40>;
+    key-positions = <31 40>;
 };
 
 paste_no_format {
