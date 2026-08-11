@@ -339,7 +339,7 @@ static int pmw3610_set_performance(const struct device *dev, bool enabled) {
 static int pmw3610_set_interrupt(const struct device *dev, const bool en) {
     const struct pixart_config *config = dev->config;
     int ret = gpio_pin_interrupt_configure_dt(&config->irq_gpio,
-                                              en ? GPIO_INT_LEVEL_ACTIVE : GPIO_INT_DISABLE);
+                                              en ? GPIO_INT_EDGE_FALLING : GPIO_INT_DISABLE);
     if (ret < 0) {
         LOG_ERR("can't set interrupt");
     }
@@ -534,9 +534,32 @@ static int pmw3610_report_data(const struct device *dev) {
     // Check MOTION register MOT bit (bit 7): if not set, the sensor did not
     // detect real motion -- the IRQ was spurious.  Skip processing to avoid
     // reporting stale register contents as movement.
+    // --- Spurious-IRQ recovery ---
+    // If the IRQ fires repeatedly but the sensor reports no real motion,
+    // the Motion pin may be stuck low (hardware fault/defocused sensor).
+    // After N consecutive empty IRQs, trigger a sensor reinit to recover.
+    #define PMW3610_SPURIOUS_IRQ_MAX 100  // ~400ms at 4ms rate
+    static uint32_t spurious_irq_count;
+
     if (!(buf[0] & 0x80)) {
+        spurious_irq_count++;
+        if (spurious_irq_count >= PMW3610_SPURIOUS_IRQ_MAX) {
+            LOG_WRN("Spurious IRQ: %u consecutive empty MOTION bursts. "
+                    "Triggering sensor reinit.", spurious_irq_count);
+            spurious_irq_count = 0;
+            dx = 0;
+            dy = 0;
+            drop_motion_bursts = PMW3610_DROP_BURSTS_AFTER_WAKE;
+            last_performance_enabled = false;
+            data->ready = false;
+            pmw3610_set_interrupt(dev, false);
+            data->async_init_step = ASYNC_INIT_STEP_POWER_UP;
+            k_work_schedule(&data->init_work, K_NO_WAIT);
+        }
         return 0;
     }
+    // Real motion — reset spurious counter
+    spurious_irq_count = 0;
 
 // 12-bit two's complement value to int16_t
 // adapted from https://stackoverflow.com/questions/70802306/convert-a-12-bit-signed-number-in-c
