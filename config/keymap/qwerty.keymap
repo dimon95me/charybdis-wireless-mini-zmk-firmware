@@ -192,7 +192,7 @@ paste_no_format {
 
 shift_cmd_click {
     bindings = <&shift_cmd_click>;
-    key-positions = <16 37>;
+    key-positions = <16 38>;
 };
 };
 
