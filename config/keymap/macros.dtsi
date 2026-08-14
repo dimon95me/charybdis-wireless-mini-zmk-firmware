@@ -24,5 +24,14 @@
                 &kp LS(A) &kp P &kp P &kp R &kp O &kp V &kp E &kp D &kp EXCL
             >;
         };
+
+        shift_cmd_click: shift_cmd_click { // Shift+Cmd+Click (macOS: open in new tab)
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LSHFT &kp LCMD>,
+                <&macro_tap &mkp LCLK>,
+                <&macro_release &kp LSHFT &kp LCMD>;
+        };
     };
 };

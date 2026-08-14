@@ -189,6 +189,11 @@ paste_no_format {
     bindings = <&kp LG(LS(V))>;
     key-positions = <28 37>;
 };
+
+shift_cmd_click {
+    bindings = <&shift_cmd_click>;
+    key-positions = <16 37>;
+};
 };
 
 macros {
