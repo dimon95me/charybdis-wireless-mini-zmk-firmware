@@ -261,6 +261,8 @@ combos:
   k: Mid CLK
 - p: [27, 28]
   k: R CLK
+- p: [23, 35]
+  k: '&sensor_reset'
 - p: [2, 3, 4]
   k: Gui+ R
 - p: [29, 30]
@@ -307,7 +309,13 @@ combos:
   k: Sft+ 6
 - p: [37, 40]
   k: CAPSLOCK
-- p: [30, 40]
+- p: [31, 40]
   k: Alt+ BACK SPACE
 - p: [28, 37]
   k: Gui+Sft+ V
+- p: [16, 38]
+  k: '&shift_cmd_click'
+- p: [32, 33, 34]
+  k: {t: BT, h: '2'}
+- p: [33, 34, 35]
+  k: {t: BT, h: '3'}
