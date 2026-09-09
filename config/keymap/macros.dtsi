@@ -28,10 +28,13 @@
         shift_cmd_click: shift_cmd_click { // Shift+Cmd+Click (macOS: open in new tab)
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LSHFT &kp LCMD>,
-                <&macro_tap &mkp LCLK>,
-                <&macro_release &kp LSHFT &kp LCMD>;
+            wait-ms = <10>;
+            tap-ms = <20>;
+            bindings = <
+                &macro_press &kp LSHIFT &kp LGUI
+                &macro_tap &mkp MB1
+                &macro_release &kp LSHIFT &kp LGUI
+            >;
         };
     };
 };

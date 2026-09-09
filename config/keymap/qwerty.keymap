@@ -194,6 +194,16 @@ shift_cmd_click {
     bindings = <&shift_cmd_click>;
     key-positions = <16 38>;
 };
+
+bt2_combo {
+    bindings = <&bt BT_SEL 2>;
+    key-positions = <32 33 34>;
+};
+
+bt3_combo {
+    bindings = <&bt BT_SEL 3>;
+    key-positions = <33 34 35>;
+};
 };
 
 macros {
